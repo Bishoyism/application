@@ -1,9 +1,9 @@
 ##########################################################
 # Name of the application.
 ##########################################################
-applicationName: "application"
+applicationName: "echo"
 
-namespaceOverride: ""
+namespaceOverride: "echo"
 
 ##########################################################
 # Global labels
@@ -13,7 +13,7 @@ namespaceOverride: ""
 ##########################################################
 labels:
   group: com.stakater.platform
-  team: stakater
+  team: devops
   
 cronJob: 
   enabled: false
@@ -161,8 +161,8 @@ deployment:
 
   # Image of the app container
   image: 
-    repository: repository/image-name
-    tag: v1.0.0
+    repository: docker.io/hashicorp/http-echo
+    tag: latest
     pullPolicy: IfNotPresent
   dnsConfig:
     # options:
